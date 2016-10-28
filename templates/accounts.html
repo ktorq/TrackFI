@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% set active_page = "accounts" %}
+
+<!-- Title -->
+{% block title %}Accounts{% endblock %}
+
+<!-- Content -->
+{% block content %}
+	<h1>Accounts Page:</h1>
+	{% for entry in entries %}
+    <b>{{ entry.name }}</b>
+    <br><br>
+	{% else %}
+    <em>Unbelievable.  No accounts here so far</em>
+	{% endfor %}
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}  
