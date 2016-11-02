@@ -8,25 +8,27 @@
                 <div class="col-md-4">
 					<div class="card">
                         <div class="header">
-                            <h4 class="title">Transactions</h4>
+                            <h4 class="title">Paychecks</h4>
                         </div>
                         <div class="content table-responsive table-full-width">
                             <table class="table table-hover table-striped">
                                 <thead>
 									<tr>
 										<th>Date</th>
-										<th>Description</th>
-										<th>Amount</th>
-										<th>Category</th>
+										<th>NetPay</th>
+										<th>Earnings</th>
+										<th>Deductions</th>
+										<th>Taxes</th>
 									</tr>
 								</thead>
 								<tbody>
-									{% for trans in transactions %}
+									{% for paycheck in paychecks %}
 										<tr>
-											<td>{{ trans.CreateDate }}</td>
-											<td>{{ trans.Description }}</td>
-											<td>{{ trans.Amount }}</td>
-											<td>{{ trans.Category }}</td>
+											<td>{{ paycheck.date }}</td>
+											<td>{{ paycheck.netpay }}</td>
+											<td>{{ paycheck.earnings }}</td>
+											<td>{{ paycheck.deductions }}</td>
+											<td>{{ paycheck.taxes }}</td>
 										</tr>
 									{% endfor %}
 								</tbody>

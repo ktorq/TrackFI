@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+<!-- Content -->
+{% block content %}
+	<h2>Accounts:</h2>
+	<br>
+	{% for entry in entries %}
+    {{ entry.name }}
+    <br><br>
+	{% else %}
+    <em>Unbelievable.  No accounts here so far</em>
+	{% endfor %}
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}  
